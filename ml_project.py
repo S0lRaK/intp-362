@@ -1,6 +1,6 @@
 # Check the versions of libraries
  
-# Python version
+# Python
 import sys
 print('Python: {}'.format(sys.version))
 # scipy
@@ -39,12 +39,12 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
-# Load dataset
+# Load data set
 url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = read_csv(url, names=names)
 
-# Dimensions of dataset
+# Dimensions of data set
 print(dataset.shape)
 
 # Peek at the data
@@ -113,7 +113,7 @@ pyplot.boxplot(results, labels=names)
 pyplot.title('Algorithm Comparison')
 pyplot.show()
 
-# Make predictions on validation dataset
+# Make predictions on validation data set
 model = SVC(gamma='auto')
 model.fit(X_train, Y_train)
 predictions = model.predict(X_validation)
